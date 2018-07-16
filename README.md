@@ -2,7 +2,7 @@
 
 Example of adding adding and using and Oracle JDBC datasource to a Red Hat JBoss EAP 7.1.x container for Openshift.
 
-This example adds an Oracle JDBC driver as a module into the JBoss EAP image during an Openshift based source to image (s2i) build.  A datasource is created at deploy time that uses the Oracle JDBC driver.  There are a few mechanisms used that are provided as facilities in the JBoss EAP image for Openshift from Red Hat.
+This example adds an Oracle JDBC driver as a module into the JBoss EAP image during an Openshift based source to image (s2i) build.  A datasource is created at deploy time that uses the Oracle JDBC driver.    This example assumes that the Oracle database is visible to pods via DNS alone.
 
 **NOTE:** The Oracle JDBC driver is not provided with this example.  [Download the JDBC driver.](http://www.oracle.com/technetwork/database/features/jdbc/jdbc-ucp-122-3110062.html)
 
