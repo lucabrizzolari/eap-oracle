@@ -17,7 +17,7 @@ This example adds an Oracle JDBC driver as a module into the JBoss EAP image dur
 
 ## How it works
 
-An Openshift build process clones this git repo into a build pod that performs a maven build of the example servlet.  The example servlet artifact and Oracle JDBC driver are copied into the image during the build.  The JBoss EAP standalone-openshift.xml that is provide in the JBoss EAP for Openshift image is updated to include the Oracle JDBC driver configuration.  The Openshift build process produces a container image to be used in application pods.
+An Openshift build process clones this git repo into a build pod that performs a maven build of the example servlet.  The example servlet artifact and Oracle JDBC driver are copied into the image during the build.  The JBoss EAP configuration file (`/opt/eap/standalone/configuration/standalone-openshift.xml`) that is provided in the JBoss EAP for Openshift image is updated to include the Oracle JDBC driver configuration.  The Openshift build process produces a container image to be used in application pods.
 
 When the resulting container image is used to produce an application pod, the pod is configured at deploy time to include datasource settings provided by the `datasources.env` [file](https://github.com/travisrogers05/eap-oracle-db/blob/master/configuration/datasources.env).
 
