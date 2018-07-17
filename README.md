@@ -6,7 +6,7 @@ This example adds an Oracle JDBC driver as a module into the JBoss EAP image dur
 
 **NOTE:** The Oracle JDBC driver is not provided with this example.  [Download the JDBC driver.](http://www.oracle.com/technetwork/database/application-development/jdbc/downloads)
 
-This [repository](https://github.com/travisrogers05/eap-oracle-db) provides a working reference which includes:
+This repository provides a working reference which includes:
 
 - An `.s2i` directory that includes an `environment` [file](https://github.com/travisrogers05/eap-oracle-db/blob/master/.s2i/environment) is provided that sets `CUSTOM_INSTALL_DIRECTORIES=extensions`.  This is used by scripts provided in the JBoss EAP image to allow for customization to take place at pod deploy time.
 - An `extensions` [directory](https://github.com/travisrogers05/eap-oracle-db/tree/master/extensions) that contains 
