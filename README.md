@@ -1,6 +1,6 @@
 # eap-oracle-db
 
-Example of adding adding and using and Oracle JDBC datasource to a Red Hat JBoss EAP 7.1.x container for Openshift.
+Example of using an Oracle JDBC datasource with the Red Hat JBoss EAP 7.1.x container for Openshift.
 
 This example adds an Oracle JDBC driver as a module into the JBoss EAP image during an Openshift based source to image (s2i) build.  A datasource is created at deploy time that uses the Oracle JDBC driver.    This example assumes that the Oracle database is visible to pods via DNS alone.
 
