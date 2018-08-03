@@ -13,6 +13,8 @@ This example adds an Oracle JDBC driver as a module into the JBoss EAP image dur
   - An `install.sh` [file](https://github.com/travisrogers05/eap-oracle-db/blob/master/extensions/install.sh) that is executed during the Openshift s2i build process.  This script takes care of installing the Oracle JDBC driver as a module into the JBoss EAP image.  (adding files to the image and updating the standalone-openshift.xml to include the driver config)
 - A `configuration` [directory](https://github.com/travisrogers05/eap-oracle-db/blob/master/configuration) that contains
   - A `datasources.env` [file](https://github.com/travisrogers05/eap-oracle-db/blob/master/configuration/datasources.env) that provides all the specifics for the datasource.  These settings are incorporated into the JBoss EAP configuration at pod deploy time.  Multiple datasources can be provided, although this example uses only one.  Refer to the [JBoss EAP for Openshift documentation](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.1/html-single/red_hat_jboss_enterprise_application_platform_for_openshift/#S2I-Artifacts) for further details about the expected contents of this file.
+- The environment variable `ENV_FILES` should be set in the deploymentconfig for this pod.  The variable is set to the location/path of the `.env` file for the datasources.  For this example, the variable would be set like so: `ENV_FILES=/opt/eap/standalone/configuration/*.env`
+  - Example oc command to set this envrionment variable: `oc set env dc/the-deploymentconfig-name ENV_FILES=/opt/eap/standalone/configuration/*.env`
 
 
 ## How it works
